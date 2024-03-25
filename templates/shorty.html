@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+        {% for button in range(quantity) %}
+            <button class="one" id="b{{loop.index}}">{{loop.index}}</button>
+        {% endfor %}
+        <!-- <button class="one" id="b1">1</button>
+        <button class="one" id="b2">2</button>
+        <button class="one" id="b3">3</button>
+        <button class="one" id="b4">4</button> -->
+    </div>
+
+</body>
+</html>

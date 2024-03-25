@@ -1,0 +1,12 @@
+settings page:
+    (differentiate between linux and windows)
+    controll how many fields
+    controll type of fields
+    shortcut fields:
+        make shortcuts
+    slider fields:
+        choose application for slider
+        choose between slider and +- buttons
+
+main page:
+    big buttons that functions as volume sliders or shortcut buttons
