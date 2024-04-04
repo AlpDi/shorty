@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html>
-<body>
-
-
-
-<form action="/action_page.php">
-  <label for="quantity">Number of fields:</label>
-  <select name="quantity" id="quantity">
-    <option value=4>4</option>
-    <option value=6>6</option>
-    <option value=8>8</option>
-  </select>
-  <br><br>
-  <input type="submit" value="Submit">
-</form>
- 
-</body>
+    <body>
+        <form action="http://127.0.0.1:5000/config" method="POST">
+            <label for="quantity">Number of fields:</label>
+            <select name="quantity" id="quantity">
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
+            <br /><br />
+            {% for field in range(quantity) %}
+                <select name="field{{loop.index}}" id="field{{loop.index}}">
+                    <option value="media_play_pause">media_play_pause</option>
+                </select>
+            {% endfor %}
+            <br/><br/>
+            <input type="submit" value="Submit" />
+        </form>
+        {% for field in range(quantity) %}
+            
+            {% endfor %}
+    </body>
 </html>
