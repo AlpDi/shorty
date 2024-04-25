@@ -7,7 +7,7 @@ def get_conf():
     with open("config") as file:
         lines = file.read().strip().split("\n")
         quantity = int(lines[0])
-        keys = lines[1].strip().split(",")
+        keys = lines[1].strip().split(" ")
         file.close()
         return (quantity, keys)
 
@@ -26,6 +26,10 @@ def config():
 
         with open("config", "w") as file:
             file.writelines(data)
+
+        for i in range(int(request.form['quantity'])):
+            print(request.form[str(i+1)], end=" ")
+
 
     return render_template("config.html", quantity=get_conf()[0])
 
