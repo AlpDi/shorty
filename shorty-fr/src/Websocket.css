@@ -1,0 +1,32 @@
+.Slider-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.connection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vc-container {
+    display: grid;
+    grid-template-rows: 1fr 8fr 1fr;
+}
+
+.single-thumb .range-slider__thumb[data-lower] {
+    width: 0;
+}
+.single-thumb .range-slider__range {
+    border-radius: 6px;
+}
+
+.single-thumb .range-slider__range {
+    background: #874ccc;
+}
+
+.single-thumb .range-slider__thumb {
+    background: #c65bcf;
+}

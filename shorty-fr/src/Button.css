@@ -5,8 +5,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: green;
-    border-radius: 25px;
+    background-color: #874ccc;
+    border-radius: 0px;
     font-family: "Courier New", Courier, monospace;
 }
 .Button-Container {

@@ -1,3 +1,5 @@
-
-
-
+.App {
+    background: #10439f;
+    display: grid;
+    grid-template-columns: 3fr 0.25fr 0.25fr;
+}
