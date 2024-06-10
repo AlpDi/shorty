@@ -9,20 +9,13 @@ export const WebSocket = () => {
     const [socketUrl, setSocketUrl] = useState("ws://localhost:8765");
     const [messageHistory, setMessageHistory] = useState([]);
     const [value, setValue] = useState([0, 12]);
+    const [app, setApp] = useState("1");
 
     const { sendMessage, lastMessage, readyState } = useWebSocket(socketUrl);
 
-    useEffect(() => {
-        if (lastMessage !== null) {
-            setMessageHistory((prev) => prev.concat(lastMessage));
-        }
-    }, [lastMessage]);
-
-    const handleClickSendMessage = useCallback(() => sendMessage("Hello"), []);
-
     const handleDragSlider = (v) => {
-        console.log(v);
-        sendMessage(v[1]);
+        console.log(app + "," + v[1]);
+        sendMessage(app + "," + v[1]);
     };
 
     const connectionStatus = {
@@ -46,6 +39,20 @@ export const WebSocket = () => {
                     max={99}
                     orientation="vertical"
                 />
+            </div>
+            <div className="select-container">
+                <select
+                    name="Selected App"
+                    value={app}
+                    onChange={(e) => setApp(e.target.value)}
+                >
+                    <option value="1">Spotify</option>
+                    <option value="2">Discord</option>
+                    <option value="3">CS2</option>
+                    <option value="4">Destiny 2</option>
+                    <option value="5">Minecraft</option>
+                    <option value="6">Firefox</option>
+                </select>
             </div>
         </div>
     );

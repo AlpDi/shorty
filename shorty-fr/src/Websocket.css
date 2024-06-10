@@ -13,7 +13,7 @@
 
 .vc-container {
     display: grid;
-    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-rows: 1fr 8fr 0.5fr;
 }
 
 .single-thumb .range-slider__thumb[data-lower] {
@@ -29,4 +29,10 @@
 
 .single-thumb .range-slider__thumb {
     background: #c65bcf;
+}
+
+.select-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
